@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://m-hero-pages.41box.com/sitemap.xml
