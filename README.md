@@ -45,7 +45,16 @@ site/articles/<slug>/index.html
 - Framework preset: `None`
 - Build command: `npm run build`
 - Build output directory: `dist`
+- Deploy command: 留空
 - Custom domain: `m-hero-pages.41box.com`
+
+不要在 Cloudflare Pages 的 Deploy command 里填写：
+
+```bash
+npx wrangler deploy
+```
+
+这是 Workers 部署命令。当前项目是 Pages Git 集成，构建完成后 Cloudflare Pages 会自动发布 `dist/`。如果填了 `npx wrangler deploy`，会出现 `Missing entry-point to Worker script or to assets directory`。
 
 ### DNS 注意事项
 
